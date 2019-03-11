@@ -1,0 +1,158 @@
+$basic-font: 'Roboto',
+sans-serif;
+
+body {
+    .container-fluid {
+        padding: 0px;
+    }
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-link {
+    font-family: $basic-font;
+    font-weight: 700;
+    font-size: .9rem;
+
+    align-items: center;
+}
+
+.home-banner {
+    background-color: #f7f7f7;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    height: 40vh;
+}
+
+.product-banner{
+    align-items: flex-start;
+    justify-content: start;
+}
+
+.main-wrap{
+    background-color: #f7f7f7;
+}
+
+.main-text {
+    font-size: 2.4rem;
+    font-family: $basic-font;
+}
+
+.list-block{
+    .list-group-item.active{
+        background-color: #F0A202;
+
+        border-color: #ffffff ;
+    }
+}
+
+.article-heading, .article-body {
+    font-size: 1.5rem;
+    font-family: $basic-font;
+    font-weight: 700;
+}
+
+.article-body{
+    font-weight: 400;
+    font-size: 1rem;
+    
+    color: #7a7c7f;
+}
+
+.button-group, .tab-pane {
+    justify-content: space-between;
+
+    .btn-chip {
+        background: #6600ff;
+        border-radius: 5px;
+        color: whitesmoke;
+
+        padding: .5rem 1rem;
+
+        font-family: $basic-font;
+    }
+}
+
+.list-block,
+    .article {
+        margin: 3rem 0;
+    }
+
+.btn-size{
+    margin: .5rem 0;
+}
+
+.info-image{
+    max-width: 100%;
+}
+
+/* main-wrapper styling ______________________ */
+
+.main-wrapper{ 
+    
+}
+
+/* main-wrapper styling ______________________ */
+
+@media (min-width: 992px) {
+    .header {
+        .navbar {
+            padding: .7rem 6rem;
+        }
+    }
+    .image {
+        max-width: 50%;
+        height: auto;
+
+        margin: 2rem 0;
+    }
+
+    .btn-size{
+        margin-right: .5rem;
+    }
+
+    .home-banner{
+        padding:  0 6rem;
+    }
+
+    .product-banner{
+        padding: 0 6rem;
+    }
+}
+
+@media (min-width: 577px) {
+    .image {
+        max-width: 50%;
+        height: auto;
+
+        margin: 2rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-banner {
+        height: auto;
+        padding: 8rem .5rem
+    }
+
+    .tab-pane {
+        margin: 3rem 1rem;
+    }
+
+    .image {
+        max-width: 100%;
+        height: auto;
+
+        margin: 1.5rem 0;
+    }
+    .product-banner{
+        .article{
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+}
