@@ -1,4 +1,4 @@
-@import "/Users/sharukhpasha/Desktop/Aashif-Seafoods/css/main.css";
+@import "main.css";
 
 $basic: .5rem 3rem;
 
@@ -19,7 +19,8 @@ $basic: .5rem 3rem;
 }
 
 .sub-text{
-    font-size: 1.2rem;
+    padding-top: 1rem;
+    font-size: 1.15rem;
     color: #818181;
 }
 
