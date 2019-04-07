@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: poppins-med;
-  src: url(../Poppins/Poppins-Medium.ttf);
+  src: url("../Poppins/$basic-fontium.ttf");
 }
 body .container-fluid {
   padding: 0px;
@@ -43,7 +43,7 @@ body .container-fluid {
 }
 
 .main-text {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   font-family: "Roboto", sans-serif;
 }
 
@@ -131,7 +131,7 @@ body .container-fluid {
 }
 
 .info-text {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Roboto", sans-serif;
   color: #818181;
   line-height: 2.5rem;
@@ -177,6 +177,17 @@ body .container-fluid {
 
 .std-pad {
   padding: 6rem 0;
+}
+
+.present-header {
+  background: #F0A202;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.urow {
+  margin: 3rem 0;
 }
 
 @media (min-width: 1025px) {
@@ -381,6 +392,16 @@ body .container-fluid {
 #social-em:hover {
   color: #f39c12;
   transition: all 0.001s;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f0a202;
 }
 
 /*# sourceMappingURL=main.css.map */

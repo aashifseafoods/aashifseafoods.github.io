@@ -2,10 +2,11 @@
 if (screen.width <= 992){
     
     var element = document.getElementsByClassName('tab-pane');
-    
-    element[1].classList.add("show");
-    element[1].classList.add("active");
+    var i;
 
-    element[2].classList.add("show");
-    element[2].classList.add("active");
+    for(i = 0 ; i < element.length ; i++){
+        element[i].classList.add("show");
+        element[i].classList.add("active");    
+    }
+    
 }
