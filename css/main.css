@@ -131,10 +131,10 @@ body .container-fluid {
 }
 
 .info-text {
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-family: "Roboto", sans-serif;
   color: #818181;
-  line-height: 2.5rem;
+  line-height: 2rem;
 }
 
 .who-are-we {
