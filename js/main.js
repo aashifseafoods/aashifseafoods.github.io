@@ -1,5 +1,5 @@
 
-if (screen.width <= 576){
+if (screen.width <= 992){
     
     var element = document.getElementsByClassName('tab-pane');
     

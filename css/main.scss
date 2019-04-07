@@ -1,5 +1,19 @@
+
 $basic-font: 'Roboto',
 sans-serif;
+$basic-color: #818181;
+
+.basic-class{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: poppins-med;
+    src: url(../Poppins/Poppins-Medium.ttf);
+}
+  
 
 body {
     .container-fluid {
@@ -7,8 +21,11 @@ body {
     }
 }
 
-.navbar-nav {
-    margin-left: auto;
+.header{
+    .navbar-nav {
+        margin-left: auto;
+        padding: 0;
+    }
 }
 
 .nav-link {
@@ -20,17 +37,17 @@ body {
 }
 
 .home-banner {
-    background-color: #f7f7f7;
-
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+}
 
-    height: 40vh;
+.grey{
+    background-color: #f7f7f7;
 }
 
 .product-banner{
     align-items: flex-start;
-    justify-content: start;
+    justify-content: space-between;
 }
 
 .main-wrap{
@@ -68,6 +85,7 @@ body {
 
     .btn-chip {
         background: #6600ff;
+        border: 2px solid #6600ff;
         border-radius: 5px;
         color: whitesmoke;
 
@@ -75,6 +93,26 @@ body {
 
         font-family: $basic-font;
     }
+
+    .btn-chip-bordered{
+        border: 2px solid #6600ff;
+        border-radius: 5px;
+    }
+
+    .btn-chip:hover{
+        opacity: .7;
+        color: white;
+    }
+
+    .btn-chip-bordered:hover{
+        background: #6600ff;
+        opacity: .7;
+        color: white;
+    }
+}
+
+.button-group{
+    margin-top: 2rem;
 }
 
 .list-block,
@@ -90,20 +128,84 @@ body {
     max-width: 100%;
 }
 
-/* main-wrapper styling ______________________ */
+.network{
+    img{
 
-.main-wrapper{ 
-    
+        max-width: 100%;
+        height: auto;
+    }
 }
 
-/* main-wrapper styling ______________________ */
+.sub-text{
+    font-size: 1.15rem;
+    font-family: $basic-font;
+    color: #818181;
+}
 
-@media (min-width: 992px) {
-    .header {
-        .navbar {
-            padding: .7rem 6rem;
-        }
-    }
+.uline{
+    margin-top: -2rem;
+}
+
+.ulined-heading{
+    border-left: 10px solid #F0A202;
+    padding-left: 1.5rem;
+}
+
+.main-header{
+    font-family: $basic-font;
+}
+
+.info-text{
+    font-size: 1.2rem;
+    font-family: $basic-font;
+    color: $basic-color;
+    line-height: 2.5rem;
+}
+
+.who-are-we{
+    margin: 5rem 0;
+}
+
+.std-img{
+    max-width: 100%;
+    height: auto;
+}
+
+.who-are-we-content, .network-content{
+    align-items: start;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.c-btn{
+    padding: 0 !important;
+
+    transition: all 0.2s ease;
+}
+
+.c-btn:hover{
+    transform: translateY(-4px);
+    box-shadow: 0px 5px 10px 1px #cccccc;
+}
+
+.prods-content{
+    padding: 3rem 0;
+}
+
+.card-img-overlay{
+    top: auto !important;
+    right: auto !important;
+}
+
+.std-mar{
+    margin: 6rem 0;
+}
+
+.std-pad{
+    padding: 6rem 0;
+}
+
+@media (min-width: 1025px){
     .image {
         max-width: 50%;
         height: auto;
@@ -116,28 +218,23 @@ body {
     }
 
     .home-banner{
-        padding:  0 6rem;
-    }
-
-    .product-banner{
-        padding: 0 6rem;
+        height: 30vw;
     }
 }
 
-@media (min-width: 577px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .image {
         max-width: 50%;
         height: auto;
-
         margin: 2rem 0;
+    }
+
+    .home-banner{
+        padding: 6rem 0;
     }
 }
 
-@media (max-width: 576px) {
-    .home-banner {
-        height: auto;
-        padding: 8rem .5rem
-    }
+@media (min-width: 320px) and (max-width: 767px) {
 
     .tab-pane {
         margin: 3rem 1rem;
@@ -155,4 +252,155 @@ body {
             padding: 0px;
         }
     }
+
+    .home-banner{
+        padding: 6rem 0;
+    }
 }
+/*.carousel-wrap {
+    margin: 90px auto;
+    padding: 0 5%;
+    width: 80%;
+    position: relative;
+  }
+  
+  
+  .owl-carousel .item {
+    position: relative;
+    z-index: 100; 
+    -webkit-backface-visibility: hidden; 
+  }
+  
+  
+  .owl-nav > div {
+    margin-top: -26px;
+    position: absolute;
+    top: 50%;
+    color: #cdcbcd;
+  }
+  
+  .owl-nav i {
+    font-size: 52px;
+  }
+  
+  .owl-nav .owl-prev {
+    left: -30px;
+  }
+  
+  .owl-nav .owl-next {
+    right: -30px;
+  }*/
+
+  /*.custom-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 22em;
+    max-width: 80%;
+    padding: 2em 0;
+    background: #FFF;
+    box-shadow: 0 0 6px 0 rgba(#202024, .12);
+    transition: all .35s ease;
+    
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      background: #000;
+      height: 4px;
+    }
+    
+    &::before {
+      width: 0;
+      opacity: 0;
+      transition: opacity 0 ease, width 0 ease;
+      transition-delay: .5s;
+    }
+    
+    &::after {
+      width: 100%;
+      background: white;
+      transition: width .5s ease;
+    }
+    
+    .content {
+      width: 18em;
+      max-width: 80%;
+    }
+    
+    .logo {
+      margin: 0 0 1em;
+      width: 10.625em;
+      transition: all .35s ease;
+    }
+    
+    h6 {
+      color: #999;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    
+    .hover_content {
+      overflow: hidden;
+      max-height: 0;
+      transform: translateY(1em);
+      transition: all .55s ease;
+      
+      p {
+        margin: 1.5em 0 0;
+        color: #6E6E70;
+        line-height: 1.4em;
+      }
+    }
+    
+    &:hover {
+      width: 24em;
+      box-shadow: 0 10px 20px 0 rgba(#202024, .12);
+      
+      &::before {
+        width: 100%;
+        opacity: 1;
+        transition: opacity .5s ease, width .5s ease;
+        transition-delay: 0;
+      }
+      
+      &::after {
+        width: 0;
+        opacity: 0;
+        transition: width 0 ease;
+      }
+      
+      .logo {
+        margin-bottom: .5em;
+      }
+      
+      .hover_content {
+        max-height: 10em;
+        transform: none;
+      }
+    }
+  }*/
+
+  .footers a {color:white;}
+.footers p {color:white;}
+.footers ul {line-height:30px;}
+#social-fb:hover {
+     color: #3B5998;
+     transition:all .001s;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+     transition:all .001s;
+ }
+ #social-gp:hover {
+     color: #d34836;
+     transition:all .001s;
+ }
+ #social-em:hover {
+     color: #f39c12;
+     transition:all .001s;
+ }
