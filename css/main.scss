@@ -99,6 +99,7 @@ body {
         background: #8186d5;
         border-radius: 2px;
         color: whitesmoke;
+        box-shadow: 0px 20px 40px -7px #8186d5;
     }
 
     .btn-chip-bordered{
@@ -175,8 +176,9 @@ body {
 }
 
 .info-text{
-    font-size: 1.15rem;
-    font-family: $basic-font;
+    font-size: 1rem;
+    /*font-family: $basic-font;*/
+    font-family: 'Rubik', sans-serif;
     font-weight: 400;
     color: $basic-color;
     line-height: 2rem;
@@ -263,8 +265,6 @@ body {
 .card:hover{
     border-radius: 2px !important;
 }
-
-
 
 @media (min-width: 1025px){
     .image {
