@@ -11,7 +11,12 @@ $basic-color: #818181;
 
 @font-face {
     font-family: poppins-med;
-    src: url("../Poppins/$basic-fontium.ttf");
+    src: url("../Poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: poppins-lig;
+    src: url("../Poppins/Poppins-Light.ttf");
 }
   
 
@@ -42,7 +47,7 @@ body {
 }
 
 .grey{
-    background-color: #f3f9fb;
+    background-color: #e3e7f1;
 }
 
 .product-banner{
@@ -84,26 +89,24 @@ body {
     justify-content: space-between;
 
     .btn-chip {
-        background: #6600ff;
+        background: #8186d5;
         border-radius: 2px;
         color: whitesmoke;
-
-        /*font-family: $basic-font;*/
     }
 
     .btn-chip-bordered{
-        border: 2px solid #6600ff;
+        border: 2px solid #8186d5;
         border-radius: 2px;
     }
 
     .btn-chip:hover{
-        opacity: .7;
+        background: #494ca2;
         color: white;
     }
 
     .btn-chip-bordered:hover{
-        background: #6600ff;
-        opacity: .7;
+        background: #494ca2;
+        border: 2px solid #494ca2;
         color: white;
     }
 }
@@ -167,6 +170,7 @@ body {
 .info-text{
     font-size: 1.15rem;
     font-family: $basic-font;
+    font-weight: 400;
     color: $basic-color;
     line-height: 2rem;
 }
@@ -188,12 +192,15 @@ body {
 
 .c-btn{
     padding: 0 !important;
-
+    border: none;
+    outline: none;
     transition: all 0.2s ease;
 }
 
 .c-btn:hover{
+    cursor: pointer;
     transform: translateY(-4px);
+    border-radius: 2px;
     box-shadow: 0px 5px 10px 1px #cccccc;
 }
 
@@ -201,9 +208,11 @@ body {
     padding: 3rem 0;
 }
 
-.card-img-overlay{
-    top: auto !important;
-    right: auto !important;
+.card-img-overlay-custom{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
 }
 
 .std-mar{
@@ -227,10 +236,25 @@ body {
     justify-content: center;
 }
 
-.quicksand{
-    font-family: 'Quicksand', sans-serif;
+.font_poppins{
+    font-family: poppins-med;
     letter-spacing: 1.5px;
     line-height: .9;
+}
+
+.card{
+    .card-img{
+        border-radius: 2px;
+    }
+
+    .card-img:hover, .c-btn:hover{
+        filter: brightness(70%);
+    }
+    border: none !important;
+}
+
+.card:hover{
+    border-radius: 2px !important;
 }
 
 

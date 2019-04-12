@@ -6,7 +6,11 @@
 
 @font-face {
   font-family: poppins-med;
-  src: url("../Poppins/$basic-fontium.ttf");
+  src: url("../Poppins/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: poppins-lig;
+  src: url("../Poppins/Poppins-Light.ttf");
 }
 body .container-fluid {
   padding: 0px;
@@ -30,7 +34,7 @@ body .container-fluid {
 }
 
 .grey {
-  background-color: #f3f9fb;
+  background-color: #e3e7f1;
 }
 
 .product-banner {
@@ -68,22 +72,21 @@ body .container-fluid {
   justify-content: space-between;
 }
 .button-group .btn-chip, .tab-pane .btn-chip {
-  background: #6600ff;
+  background: #8186d5;
   border-radius: 2px;
   color: whitesmoke;
-  /*font-family: $basic-font;*/
 }
 .button-group .btn-chip-bordered, .tab-pane .btn-chip-bordered {
-  border: 2px solid #6600ff;
+  border: 2px solid #8186d5;
   border-radius: 2px;
 }
 .button-group .btn-chip:hover, .tab-pane .btn-chip:hover {
-  opacity: 0.7;
+  background: #494ca2;
   color: white;
 }
 .button-group .btn-chip-bordered:hover, .tab-pane .btn-chip-bordered:hover {
-  background: #6600ff;
-  opacity: 0.7;
+  background: #494ca2;
+  border: 2px solid #494ca2;
   color: white;
 }
 
@@ -140,6 +143,7 @@ body .container-fluid {
 .info-text {
   font-size: 1.15rem;
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
   color: #818181;
   line-height: 2rem;
 }
@@ -161,11 +165,15 @@ body .container-fluid {
 
 .c-btn {
   padding: 0 !important;
+  border: none;
+  outline: none;
   transition: all 0.2s ease;
 }
 
 .c-btn:hover {
+  cursor: pointer;
   transform: translateY(-4px);
+  border-radius: 2px;
   box-shadow: 0px 5px 10px 1px #cccccc;
 }
 
@@ -173,9 +181,11 @@ body .container-fluid {
   padding: 3rem 0;
 }
 
-.card-img-overlay {
-  top: auto !important;
-  right: auto !important;
+.card-img-overlay-custom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
 }
 
 .std-mar {
@@ -199,10 +209,24 @@ body .container-fluid {
   justify-content: center;
 }
 
-.quicksand {
-  font-family: "Quicksand", sans-serif;
+.font_poppins {
+  font-family: poppins-med;
   letter-spacing: 1.5px;
   line-height: 0.9;
+}
+
+.card {
+  border: none !important;
+}
+.card .card-img {
+  border-radius: 2px;
+}
+.card .card-img:hover, .card .c-btn:hover {
+  filter: brightness(70%);
+}
+
+.card:hover {
+  border-radius: 2px !important;
 }
 
 @media (min-width: 1025px) {
