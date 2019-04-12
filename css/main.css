@@ -166,7 +166,7 @@ body .container-fluid {
   height: auto;
 }
 
-.who-are-we-content, .network-content {
+.who-are-we-content, .network-row {
   align-items: start;
   justify-content: center;
   padding: 3rem 0;
@@ -238,6 +238,21 @@ body .container-fluid {
   border-radius: 2px !important;
 }
 
+.who-are-we-content-col {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.network-row-col-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: column;
+}
+
 @media (min-width: 1025px) {
   .image {
     max-width: 50%;
@@ -251,6 +266,11 @@ body .container-fluid {
 
   .home-banner {
     height: 30vw;
+  }
+}
+@media (max-width: 1000px) {
+  .who-are-we-content-col, .network-row-col-content {
+    margin-bottom: 3rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
