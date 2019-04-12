@@ -69,15 +69,13 @@ body .container-fluid {
 }
 .button-group .btn-chip, .tab-pane .btn-chip {
   background: #6600ff;
-  border: 2px solid #6600ff;
-  border-radius: 5px;
+  border-radius: 2px;
   color: whitesmoke;
-  padding: 0.5rem 1rem;
-  font-family: "Roboto", sans-serif;
+  /*font-family: $basic-font;*/
 }
 .button-group .btn-chip-bordered, .tab-pane .btn-chip-bordered {
   border: 2px solid #6600ff;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 .button-group .btn-chip:hover, .tab-pane .btn-chip:hover {
   opacity: 0.7;
@@ -87,6 +85,15 @@ body .container-fluid {
   background: #6600ff;
   opacity: 0.7;
   color: white;
+}
+
+.button-group .spacing {
+  padding: 12px 24px;
+}
+
+.tab-pane .spacing {
+  margin-top: 3rem;
+  padding: 0;
 }
 
 .button-group {
@@ -183,11 +190,19 @@ body .container-fluid {
   background: #F0A202;
   padding: 0.5rem 1rem;
   color: white;
-  border-radius: 0.5rem;
+  border-radius: 2px;
 }
 
 .urow {
-  margin: 3rem 0;
+  flex-flow: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 0.9;
 }
 
 @media (min-width: 1025px) {
