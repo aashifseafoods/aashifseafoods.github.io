@@ -100,22 +100,22 @@ body {
         border-radius: 2px;
         color: whitesmoke;
         box-shadow: 0px 20px 40px -7px #8186d5;
-    }
+        
+        &-bordered{
+            border: 2px solid #8186d5;
+            border-radius: 2px;
 
-    .btn-chip-bordered{
-        border: 2px solid #8186d5;
-        border-radius: 2px;
-    }
-
-    .btn-chip:hover{
-        background: #494ca2;
-        color: white;
-    }
-
-    .btn-chip-bordered:hover{
-        background: #494ca2;
-        border: 2px solid #494ca2;
-        color: white;
+            &:hover{
+                background: #494ca2;
+                border: 2px solid #494ca2;
+                color: white;   
+            }
+        }
+        
+        &:hover{
+            background: #494ca2;
+            color: white;
+        }
     }
 }
 
@@ -175,11 +175,11 @@ body {
     font-family: $basic-font;
 }
 
-.info-text{
+.info-text, .the-parent__text--primary, .the-parent__text--secondary{
     font-size: 1rem;
-    /*font-family: $basic-font;*/
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
+
     color: $basic-color;
     line-height: 2rem;
 }
@@ -189,11 +189,12 @@ body {
 }
 
 .std-img{
+    border-radius: 2px;
     max-width: 100%;
     height: auto;
 }
 
-.who-are-we-content, .network-row{
+.who-are-we-content, .network__row{
     align-items: start;
     justify-content: center;
     padding: 3rem 0;
@@ -204,13 +205,13 @@ body {
     border: none;
     outline: none;
     transition: all 0.2s ease;
-}
-
-.c-btn:hover{
-    cursor: pointer;
-    transform: translateY(-4px);
-    border-radius: 2px;
-    box-shadow: 0px 5px 10px 1px #cccccc;
+    
+    &:hover{
+        cursor: pointer;
+        transform: translateY(-4px);
+        border-radius: 2px;
+        box-shadow: 0px 5px 10px 1px #cccccc;
+    }
 }
 
 .prods-content{
@@ -252,19 +253,19 @@ body {
 }
 
 .card{
-    .card-img{
+    &-img{
         border-radius: 2px;
-    }
-
-    .card-img:hover, .c-btn:hover{
-        filter: brightness(70%);
+            &:hover, .c-btn:hover{
+                filter: brightness(70%);
+            }
     }
     border: none !important;
+    
+    &:hover{
+        border-radius: 2px !important;
+    }
 }
 
-.card:hover{
-    border-radius: 2px !important;
-}
 
 .who-are-we-content-col{
     display: flex;
@@ -273,12 +274,19 @@ body {
     justify-content: flex-start;
 }
 
-.network-row-col-content{
+.network__row__col__content{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
     flex-flow: column;
+}
+
+
+.badge-group{
+    & &--#{custom} {
+        border-radius: 2px;
+    }
 }
 
 @media (min-width: 1025px){
@@ -299,7 +307,7 @@ body {
 }
 
 @media (max-width: 1000px){
-    .who-are-we-content-col, .network-row-col-content{
+    .who-are-we-content-col, .network__row__col__content{
         margin-bottom: 3rem; 
     }
 }

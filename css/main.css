@@ -88,13 +88,13 @@ body .container-fluid {
   border: 2px solid #8186d5;
   border-radius: 2px;
 }
-.button-group .btn-chip:hover, .tab-pane .btn-chip:hover {
-  background: #494ca2;
-  color: white;
-}
 .button-group .btn-chip-bordered:hover, .tab-pane .btn-chip-bordered:hover {
   background: #494ca2;
   border: 2px solid #494ca2;
+  color: white;
+}
+.button-group .btn-chip:hover, .tab-pane .btn-chip:hover {
+  background: #494ca2;
   color: white;
 }
 
@@ -148,9 +148,8 @@ body .container-fluid {
   font-family: "Roboto", sans-serif;
 }
 
-.info-text {
+.info-text, .the-parent__text--primary, .the-parent__text--secondary {
   font-size: 1rem;
-  /*font-family: $basic-font;*/
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   color: #818181;
@@ -162,11 +161,12 @@ body .container-fluid {
 }
 
 .std-img {
+  border-radius: 2px;
   max-width: 100%;
   height: auto;
 }
 
-.who-are-we-content, .network-row {
+.who-are-we-content, .network__row {
   align-items: start;
   justify-content: center;
   padding: 3rem 0;
@@ -178,7 +178,6 @@ body .container-fluid {
   outline: none;
   transition: all 0.2s ease;
 }
-
 .c-btn:hover {
   cursor: pointer;
   transform: translateY(-4px);
@@ -227,13 +226,12 @@ body .container-fluid {
 .card {
   border: none !important;
 }
-.card .card-img {
+.card-img {
   border-radius: 2px;
 }
-.card .card-img:hover, .card .c-btn:hover {
+.card-img:hover, .card-img .c-btn:hover {
   filter: brightness(70%);
 }
-
 .card:hover {
   border-radius: 2px !important;
 }
@@ -245,12 +243,16 @@ body .container-fluid {
   justify-content: flex-start;
 }
 
-.network-row-col-content {
+.network__row__col__content {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
   flex-flow: column;
+}
+
+.badge-group .badge-group--custom {
+  border-radius: 2px;
 }
 
 @media (min-width: 1025px) {
@@ -269,7 +271,7 @@ body .container-fluid {
   }
 }
 @media (max-width: 1000px) {
-  .who-are-we-content-col, .network-row-col-content {
+  .who-are-we-content-col, .network__row__col__content {
     margin-bottom: 3rem;
   }
 }
